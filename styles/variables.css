@@ -5,6 +5,7 @@
 :root {
   --bg-img: var(--bg-img-url);
   --nav-btn-color: var(--btn-color);
+  --nav-hover-color: rgb(255 0 112 / 0.4);
   --text-font: 'IBM Plex Mono';
   --accent-color: #FF0070;
 }

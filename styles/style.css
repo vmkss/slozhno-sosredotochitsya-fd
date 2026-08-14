@@ -5,13 +5,13 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  align-items: start;
   background-image: var(--bg-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
 
 .header {
@@ -21,13 +21,9 @@
   max-height: 668px;
   justify-self: center;
   align-self: center;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr min-content 1fr;
   grid-template-columns: 1fr;
   position: relative;
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
-
-  /*max-width: 375px;*/
 }
 
 .decorated-zone::before,
@@ -42,15 +38,15 @@
   border-right: 1px solid var(--nav-btn-color);
   border-top: 1px solid var(--nav-btn-color);
   top: 10px;
-  right: 10px;
+  right: 0;
   justify-self: end;
 }
 
 .decorated-zone::before {
   border-left: 1px solid var(--nav-btn-color);
   border-bottom: 1px solid var(--nav-btn-color);
-  left: 10px;
   bottom: 10px;
+  left: 0;
   align-self: end;
 }
 
@@ -61,8 +57,7 @@
   font-family: var(--text-font), sans-serif; 
   color: var(--nav-btn-color); 
   justify-self: end; 
-  margin-right: 9px;
-  top: 14px;
+  top: 12px;
   right: 10px; 
 }
 
@@ -106,7 +101,18 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--nav-btn-color);
-  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--nav-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--nav-btn-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
 }
 
 .header__title {
@@ -125,22 +131,135 @@
   grid-row: 3;
   align-self: center;
   justify-self: start;
-  margin-top: -25px;
-  background-color: var(--nav-btn-color);
 }
 
-.header-text {
+.title-decor {
+  font-family: var(--text-font), sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;  
+  background-color: var(--nav-btn-color);
+  color: #000028;
+}
+
+
+/* MAIN */
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section__title {
   font-family: var(--text-font), sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: #000028;
-  
+  color: var(--nav-btn-color);
+}
+
+.section__text {
+  font-family: var(--text-font), sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+  color: #F1B2CE;  
+}
+
+.section__text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.section__text-link:hover {
+  border-bottom: 1px solid var(--text-link-border-color);
+}
+
+.section__text-link:focus {
+  border: 1px solid var(--text-link-border-color);
+}
+
+.section__text-link:focus-visible {
+  outline: none;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article:has(h4.title-decor) h4.title-decor {
+  font-weight: 400;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+}
+
+.gallery_img {
+  max-inline-size: 100%;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  font-family: var(--text-font), sans-serif;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >=768px) {
   .page {
     gap: 60px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;    
+  }
+
+  .header-text-container {
+    width: 50%;
+    justify-self: end;   
+  }
+
+  .section:not(.accent-section, .section-gallery) {
+    grid-template-columns: min-content 1fr;
+  }
+
+  .section:not(.accent-section, .section-gallery) .section__title {
+    grid-column: 1;
+  }
+
+  .section:not(.accent-section, .section-gallery) .article {
+    grid-column: 2;
+  }
+
+  .section.accent-section .section__title {
+    display: grid;
+    grid-template-columns: min-content;
+  }
+
+  .section.section-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -148,10 +267,4 @@
   .header__theme-menu-list {
     flex-direction: row;
   }
-}
-
-.footer {
-  height: 100vh;
-  min-height: 668px;
-  background-color: red;
 }
