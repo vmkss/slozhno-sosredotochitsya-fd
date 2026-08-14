@@ -10,7 +10,14 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-img-url: url("../images/cover-image-dark.png");
-  --btn-color: #ff0070;
-  --header-color: #DB00FF;
+  --nav-color: #ff0070;
   --text-link-border-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --nav-hover-color: rgb(255 0 112 / 0.4);
+  --main-title-color: #DB00FF;
+  --title-decor-color: #000028;
+  --text-color: #F1B2CE;
+  --nav-border-color: #ff0070;
+  --title-bg-color: #ff0070;
+  --display-text: block;
 }
