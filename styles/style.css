@@ -51,7 +51,7 @@
   font-family: var(--text-font), sans-serif;
   color: var(--nav-color);
   justify-self: end;
-  top: 2px;
+  top: 10px;
   right: 10px;
 }
 
@@ -88,10 +88,10 @@
   background-color: transparent;
   color: var(--nav-color);
   font-size: 18px;
+  line-height: 18px;
   text-transform: lowercase;
   border: 1px solid transparent;
-  padding: 3px 10px;
-  letter-spacing: 1px;
+  padding: 3px 13px;
 }
 
 .header__theme-menu-button_active {
