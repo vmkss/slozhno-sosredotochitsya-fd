@@ -21,3 +21,18 @@
   --title-bg-color: #ff0070;
   --display-text: block;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-color: #ff0070;
+    --text-link-border-color: #F1B2CE;
+    --accent-color: #FF0070;
+    --nav-hover-color: rgb(255 0 112 / 0.4);
+    --main-title-color: #DB00FF;
+    --title-decor-color: #000028;
+    --text-color: #F1B2CE;
+    --nav-border-color: #ff0070;
+    --title-bg-color: #ff0070;
+    --display-text: block;
+  }
+}

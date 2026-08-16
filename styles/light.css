@@ -21,3 +21,18 @@
   --title-bg-color: #FF8DCB;
   --display-text: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --nav-color: #353430;
+    --text-link-border-color: #353430;
+    --accent-color: #FF8DCB;
+    --nav-hover-color: rgba(50, 49, 45, 0.4);
+    --main-title-color: #FFC2E6;
+    --title-decor-color: #353430;
+    --text-color: #353430;
+    --nav-border-color: #353430;
+    --title-bg-color: #FF8DCB;
+    --display-text: none;
+  }
+}
