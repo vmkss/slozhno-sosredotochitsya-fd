@@ -204,8 +204,6 @@
 
 .footer {
   height: 100vh;
-  min-height: 668px;
-  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -228,6 +226,21 @@
     gap: 60px;
   }
 
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone-text {
+    top: 20px;
+    right: 28px;
+  }  
+
   .header {
     padding: 20px;
   }
@@ -244,6 +257,7 @@
 
   .main {
     gap: 80px;
+    padding: 0 20px;
   }
 
   .section:not(.accent-section, .section-gallery) {
