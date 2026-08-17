@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-img-url: url("../images/cover-image-dark.png");
+  --main-bg-color: #000028;
   --nav-color: #ff0070;
   --text-link-border-color: #F1B2CE;
   --accent-color: #FF0070;
@@ -24,6 +25,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --bg-img-url: url("../images/cover-image-dark.png");
+    --main-bg-color: #000028;
     --nav-color: #ff0070;
     --text-link-border-color: #F1B2CE;
     --accent-color: #FF0070;
